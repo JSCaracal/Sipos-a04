@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+class NameSorter{
+    -ArrayList<String> names
+    +readNames(String fileName):ArrayList<String>
+    +sortNames(ArrayList<String>)
+    +writeNames(String fileName)
+}
+class Solution41{
+    +main()
+    ' intit name list
+    'store values from readNames() in name list
+    'Sort the name list
+    'Use writeNames
+}
+Solution41 --o NameSorter
+
+@enduml
