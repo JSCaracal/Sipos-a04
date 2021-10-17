@@ -23,15 +23,14 @@ public class DataParsing {
     }
     Employee parseData(String data){
         int salary;
-        String firstName;
-        String LastName;
 
         //Deliminate the data into the variables
-
+        String[] parsedData = data.split(",");
+        salary = Integer.parseInt(parsedData[2]);
         //Create a new Employee object
-
+        Employee temp = new Employee(parsedData[0],parsedData[1],salary);
         //Return the object.
-        return;
+        return temp;
     }
 
 }
