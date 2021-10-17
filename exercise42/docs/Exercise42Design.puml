@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+class Solution42{
+    +main()
+}
+class DataParsing{
+    -String unParsedInputString
+    -ArrayList<Employee>
+
+    ArrayList<Employee> readData(String FileName)
+    Employee parseData(String data)
+    writeData(String FileName)
+    printData()
+}
+
+class Employee{
+    -String firstName
+    -String lastName
+    -int salary
+}
+DataParsing *-- Employee
+Solution42 *-- DataParsing
+Solution42 *-- Employee
+@enduml

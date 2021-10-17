@@ -1,8 +1,7 @@
 package baseline;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
+import javax.imageio.stream.FileImageOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -53,9 +52,24 @@ public class DataParsing {
         System.out.println("----------------------------------------");
         for (Employee e:this.Employees) {
             System.out.format("%10s%15s%15d\n",e.getLastName(),e.getFirstName(),e.getSalary());
+
         }
     }
 
-    void writeData()
+    void writeData(String fileName){
+        try{
+            File outputFile = new File(fileName);
+            FileWriter fileWriter = new FileWriter(fileName);
+            fileWriter.write("Last\t\tFirst\t\tSalary\n");
+            for (Employee e:this.Employees) {
+                fileWriter.write(e.getLastName()+"\t\t"+e.getFirstName()+"\t\t"+e.getSalary()+"\n");
+
+            }
+            fileWriter.close();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
 }
