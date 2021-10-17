@@ -4,6 +4,7 @@ class NameSorter{
     -ArrayList<String> names
     +readNames(String fileName):ArrayList<String>
     +sortNames(ArrayList<String>)
+    +printNames()
     +writeNames(String fileName)
 }
 class Solution41{
