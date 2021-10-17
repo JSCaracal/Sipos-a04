@@ -1,6 +1,10 @@
 package baseline;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class DataParsing {
     private String unParsedInputString;
@@ -8,18 +12,29 @@ public class DataParsing {
 
     //Method Reads data from file
     ArrayList<Employee> readData(String fileName){
+        ArrayList<Employee> employeeList = new ArrayList<Employee>();
         //Try
+        try {
             //Declare file and scanner Objects
-
+            File inputFile = new File(fileName);
+            Scanner inputReader = new Scanner(inputFile);
+            String unParsedData;
             //Take in data
-
-            //call PraseData()
-
-            //Add the returned data to the arrayList
+            while(inputReader.hasNextLine()){
+                unParsedData = inputReader.nextLine();
+                //call PraseData()
+                //Add the returned data to the arrayList
+                employeeList.add(parseData(unParsedData));
+            }
+        }
         //Catch
-
+        catch (FileNotFoundException e){
+            System.out.println("Error");
+            e.printStackTrace();
+        }
         //Return arrayList
-        return;
+        this.Employees = employeeList;
+        return employeeList;
     }
     Employee parseData(String data){
         int salary;
@@ -32,5 +47,15 @@ public class DataParsing {
         //Return the object.
         return temp;
     }
+
+    void printData(){
+        System.out.format("%10s%15s%15s\n","Last","First","Salary");
+        System.out.println("----------------------------------------");
+        for (Employee e:this.Employees) {
+            System.out.format("%10s%15s%15d\n",e.getLastName(),e.getFirstName(),e.getSalary());
+        }
+    }
+
+    void writeData()
 
 }
