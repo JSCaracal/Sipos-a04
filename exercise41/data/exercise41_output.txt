@@ -1,9 +1,0 @@
-The number of people are 7
------------------
-Johnson, Jim
-Jones, Aaron
-Jones, Chris
-Ling, Mai
-Swift, Geoffrey
-Xiong, Fong
-Zarnecki, Sabrina
