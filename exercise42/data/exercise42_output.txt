@@ -1,8 +1,0 @@
-Last		First		Salary
-Mai		Ling		55900
-Jim		Johnson		56500
-Aaron		Jones		46000
-Chris		Jones		34500
-Geoffrey		Swift		14200
-Fong		Xiong		65000
-Sabrina		Zarnecki		51500
