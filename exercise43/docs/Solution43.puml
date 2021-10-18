@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+class Solution43{
+    main()
+}
+
+class WebsiteBuilder{
+    -String authorName
+    -String websiteName
+    -boolean hasCSS
+    -boolean hasJS
+    void askForCredentials()
+    void askForFolderJS()
+    void askForFolderCSS()
+    void FolderCreator(String path)
+    void printResults()
+}
+Solution43 *-- WebsiteBuilder
+@enduml
