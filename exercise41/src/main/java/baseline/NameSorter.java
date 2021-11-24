@@ -10,7 +10,7 @@ public class NameSorter {
     private ArrayList<String> Names;
 
     //Read the File and return the Name List
-    ArrayList<String> readNames(String fileName){
+   public ArrayList<String> readNames(String fileName){
         ArrayList<String> temp = new ArrayList<String>();
         File inputFile = new File(fileName);
         try {
@@ -28,12 +28,11 @@ public class NameSorter {
     }
 
     //Sort the names in the List
-    void sortNames(){
-
+    public void sortNames(){
         Collections.sort(this.Names);
     }
 
-    void printNames(){
+    public void printNames(){
         System.out.printf("Total of %d names\n-----------------\n",this.Names.size());
         for (String name:Names) {
             System.out.println(name);
@@ -41,6 +40,14 @@ public class NameSorter {
         System.out.println();
     }
 
+
+    public ArrayList<String> getNames() {
+        return Names;
+    }
+
+    public void setNames(ArrayList<String> names) {
+        Names = names;
+    }
 
     //Write the Names to a file
     void writeNames(String fileName){
@@ -64,5 +71,6 @@ public class NameSorter {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }
