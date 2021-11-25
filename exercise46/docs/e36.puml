@@ -1,0 +1,10 @@
+@startuml
+class WordCounter{
+    -Map<String,Interger>WordStorage
+    -ArrayList<String>
+
+    +Readfile()
+    +SortData()
+}
+
+@enduml
