@@ -1,0 +1,14 @@
+@startuml
+class Inventory{
+    -Arraylist<InventoryItem> inventory
+
+    +void readJson()
+    +search product(String Name)
+}
+class InventoryItem{
+    -String name
+    -Double price
+    -int quantity
+}
+InventoryItem--|>Inventory
+@enduml

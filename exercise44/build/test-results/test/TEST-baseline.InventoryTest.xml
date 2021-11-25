@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseline.InventoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-11-25T17:40:02" hostname="TABLET-H64PVHM8" time="0.062">
+  <properties/>
+  <testcase name="isInInventory()" classname="baseline.InventoryTest" time="0.058"/>
+  <testcase name="readJson()" classname="baseline.InventoryTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
