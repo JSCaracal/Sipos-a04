@@ -6,7 +6,7 @@ public class Solution43 {
         builder.askForCredentials();
         builder.askForFolderJS();
         builder.askForCSS();
-        builder.HTMLCreation();
+        builder.htmlcreation();
         builder.printResults();
 
     }

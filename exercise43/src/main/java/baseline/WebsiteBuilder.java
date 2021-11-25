@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class WebsiteBuilder {
+    private String s = "./website/";
     private String authorName;
     private String websiteName;
     private boolean hasCSS;
@@ -17,7 +18,7 @@ public class WebsiteBuilder {
         this.websiteName = input.nextLine();
         System.out.print("Who is the author of your site?: ");
         this.authorName = input.nextLine();
-        File dir = new File ("./website/"+websiteName);
+        File dir = new File (s +websiteName);
         dir.mkdirs();
     }
 
@@ -26,7 +27,7 @@ public class WebsiteBuilder {
         System.out.print("Would you like a JS Folder? Y/N: ");
         String response = input.next();
         if(response.equals("Y")){
-            FolderCreator("./website/js/");
+            folderCreator("./website/js/");
             this.hasJS = true;
         }
     }
@@ -35,19 +36,19 @@ public class WebsiteBuilder {
         System.out.print("Would you like a CSS Folder? Y/N: ");
         String response = input.next();
         if(response.equals("Y")){
-            FolderCreator("./website/css/");
+            folderCreator("./website/css/");
             this.hasCSS = true;
         }
     }
     //Creates the directory
-    void FolderCreator(String path){
+    public  void folderCreator(String path){
         File dir = new File(path);
         dir.mkdir();
     }
     //Creates the HTML Document
-    void HTMLCreation(){
+    void htmlcreation(){
         try{
-            File dir = new File("./website/"+websiteName+"/index.html");
+            File dir = new File(s+websiteName+"/index.html");
             FileWriter writer = new FileWriter(dir.getPath());
             writer.write("<!DOCTYPE html>\n" +
                     "<html>\n" +
@@ -62,17 +63,22 @@ public class WebsiteBuilder {
         }
     }
     void printResults(){
-        String currentCheck;
-        File dir = new File("./website/"+this.websiteName+"/js");
-        File dir2 = new File("./website/"+this.websiteName+"/css");
-        System.out.println("Created ./website/"+this.websiteName);
-        System.out.println("Created ./website/"+this.websiteName+"/index.html");
+        System.out.println("Created"+s+this.websiteName);
+        System.out.println("Created"+s+this.websiteName+"/index.html");
         if(hasJS){
-            System.out.println("Created ./website/"+this.websiteName+"/js");
+            System.out.println("Created"+s+this.websiteName+"/js");
         }
 
         if(hasCSS){
-            System.out.println("Created ./website/"+this.websiteName+"/css");
+            System.out.println("Created"+s+this.websiteName+"/css");
         }
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public void setWebsiteName(String websiteName) {
+        this.websiteName = websiteName;
     }
 }
