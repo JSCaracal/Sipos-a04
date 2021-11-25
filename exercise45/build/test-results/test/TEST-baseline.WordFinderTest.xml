@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="baseline.WordFinderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-11-25T06:11:23" hostname="TABLET-H64PVHM8" time="0.029">
+  <properties/>
+  <testcase name="readFile()" classname="baseline.WordFinderTest" time="0.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

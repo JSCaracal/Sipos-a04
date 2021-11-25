@@ -1,0 +1,8 @@
+@startuml
+class WordFinder{
+-String rawText
+
++void readFile()
++void writeFile()
+}
+@enduml
